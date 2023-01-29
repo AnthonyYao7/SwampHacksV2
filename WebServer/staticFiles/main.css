@@ -109,3 +109,9 @@ label
     display: flex;
     justify-content: space-between;
 }
+.disclaimer
+{
+    margin-top: 2%;
+    font-size: 12px;
+    font-weight: 400;
+}
