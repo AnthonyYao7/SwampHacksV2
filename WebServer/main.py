@@ -31,8 +31,8 @@ def upload_file():
             filename = secure_filename(file.filename)
             flash('file {} saved'.format(file.filename))
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return render_template('templates/nutritionFacts.html', serving="SAMPLE", calories="SAMPLE", tFat="SAMPLE", sFat="SAMPLE", salt="SAMPLE", chol="SAMPLE", carb="SAMPLE", fiber="SAMPLE", sugar="SAMPLE") #put in the new page to redirect to in here
-    return render_template('templates/food.html')
+            return render_template('nutritionFacts.html', serving="SAMPLE", calories="SAMPLE", tFat="SAMPLE", sFat="SAMPLE", salt="SAMPLE", chol="SAMPLE", carb="SAMPLE", fiber="SAMPLE", sugar="SAMPLE") #put in the new page to redirect to in here
+    return render_template('food.html')
 
 if __name__ == '__main__':
     app.secret_key = 'the random string'
