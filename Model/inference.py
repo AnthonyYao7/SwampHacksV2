@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-
+import pprint
 model = tf.keras.models.load_model("FoodNutrientCalculator2")
 
 
@@ -22,7 +22,7 @@ def inference_on_image(path):
 
 
 def main():
-    inference_on_image("TestData/lasagna.jpg")
+    pprint.pprint(inference_on_image("TestData/lasagna.jpg"))
 
 
 if __name__ == "__main__":
