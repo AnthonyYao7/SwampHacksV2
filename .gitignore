@@ -1,0 +1,9 @@
+*
+!Model/
+!Model/*
+!Model/FoodNutrientCalculator2/
+!Model/FoodNutrientCalculator2/*
+!Model/FoodNutrientCalculator2/assets/
+!Model/FoodNutrientCalculator2/assets/*
+!Model/FoodNutrientCalculator2/variables/
+!Model/FoodNutrientCalculator2/variables/*
