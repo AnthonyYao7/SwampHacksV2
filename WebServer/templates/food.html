@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Food Macro Detector</title>
+
+        <!--Link CSS Files-->
+        <link rel="stylesheet" href="../staticFiles/header.css">
+        <link rel="stylesheet" href="../staticFiles/main.css">
+        <link rel="stylesheet" href="../staticFiles/footer.css">
+
+        <!--Link JS Files-->
+        <script src="food.js"></script>
+
+        <!--Link fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montjjerrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <!--HEADER-->
+        <div class="header">
+            <p class="main-title">Food Macro Detector</p>
+        </div>
+        <!--MAIN-->
+        <div class="main">
+            <div class="content">
+                <p class="welcome">Welcome to the Food Macro Detector</p>
+                <p class="description">Upload an image of food to figure out the nutritional facts of the item</p>
+            </div>
+        </div>
+        <!--UPLOAD BUTTON-->
+        <form method="post" enctype="multipart/form-data">
+            <input type=file name=file id="file" accept="image/*" onchange="form.submit()">
+        </form>
+        <label for="file">
+            <img class="upload-image-icon" src="../staticFiles/icons8-add-image-24.png">
+            Upload an Image of Food
+        </label>
+        <div class="footer">
+            <div class="credits">
+                <p class="us">By Andrew, Anthony, Evan, and James</p>
+                <div class="icon-credits">
+                    <a target="_blank" href="https://icons8.com/icon/111372/add-image">Add Image </a> icon by <a target="_blank" href="https://icons8.com"> Icons8</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
