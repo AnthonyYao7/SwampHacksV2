@@ -1,0 +1,111 @@
+/*
+Color Schemes: https://visme.co/blog/website-color-schemes/
+ */
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #EDF5E1;
+}
+p
+{
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #05386B;
+    text-align: center;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.welcome
+{
+    font-weight: 600;
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+.found
+{
+    font-weight: 600;
+    margin-top: 50px;
+}
+.description
+{
+    margin-bottom: 5%
+}
+
+.upload-image-icon
+{
+    margin-right: 10px;
+}
+input[type="file"]
+{
+    display: none;
+}
+label
+{
+    height: 60px;
+    background-color: #05386B;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    width: 50%;
+    color: #5CDB95;
+    font-weight: 600;
+}
+
+.nutrition-header
+{
+    position: absolute;
+    margin-top: 5%;
+    top: 120px;
+    height: 30px;
+    left: 20%;
+    right: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #05386B;
+    color: #5CDB95;
+}
+
+.nutrition-header-text
+{
+    color: #EDF5E1;
+    font-weight: 600;
+}
+
+.nutrition-table
+{
+    background-color: #5CDB95;
+    position: absolute;
+    margin-top: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    top: 150px;
+    height: auto;
+    left: 20%;
+    right: 20%;
+}
+
+.nutrition-row
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: space-between;
+}

@@ -7,3 +7,12 @@
 !Model/FoodNutrientCalculator2/assets/*
 !Model/FoodNutrientCalculator2/variables/
 !Model/FoodNutrientCalculator2/variables/*
+!WebServer/
+!WebServer/staticFiles/
+!WebServer/staticFiles/*
+!WebServer/templates/
+!WebServer/templates/*
+!WebServer/Uploads/
+!WebServer/Uploads/*
+!WebServer/main.py
+

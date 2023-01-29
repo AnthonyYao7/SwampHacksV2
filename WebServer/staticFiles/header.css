@@ -1,0 +1,15 @@
+.header
+{
+    background-color: #5CDB95;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}
+.main-title
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #05386B;
+}
