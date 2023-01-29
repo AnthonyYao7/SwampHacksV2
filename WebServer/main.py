@@ -14,7 +14,7 @@ from ..Model.inference import inference_on_image
 def predict(filename):
     return inference_on_image(filename)
 
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'SwampHacksFoodMacroPredictor/WebServer/Uploads')
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Uploads')
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__, template_folder='templates', static_folder='staticFiles')
@@ -42,9 +42,14 @@ def upload_file():
             filename = secure_filename(file.filename)
             flash('file {} saved'.format(file.filename))
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+<<<<<<< HEAD
             nutrients = predict(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             return render_template('WebServer/nutritionFacts.html', calories=round(nutrients['Calories']), tFat=round(nutrients['Total Fat']), sFat=round(nutrients['Saturated Fat']), chol=round(nutrients['Cholesterol']), carb=round(nutrients['Carbohydrates']), fiber=round(nutrients['Fiber']), protein=(nutrients['Protein'])) #put in the new page to redirect to in here
     return render_template('WebServer/food.html')
+=======
+            return render_template('nutritionFacts.html', serving="SAMPLE", calories="SAMPLE", tFat="SAMPLE", sFat="SAMPLE", salt="SAMPLE", chol="SAMPLE", carb="SAMPLE", fiber="SAMPLE", sugar="SAMPLE") #put in the new page to redirect to in here
+    return render_template('food.html')
+>>>>>>> 2d5ffe750b16f3fc21892608960624ed6c319d0c
 
 if __name__ == '__main__':
     app.secret_key = 'the random string'
