@@ -1,18 +1,14 @@
 import os
 import tensorflow as tf
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing.image import load_img
-from tensorflow.keras.applications.vgg16 import preprocess_input
-from tensorflow.keras.preprocessing import image
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 import numpy as np
 import sys
 from PIL import Image
-from ..Model.inference import inference_on_image
+import Model.inference as inference
 
 def predict(filename):
-    return inference_on_image(filename)
+    return inference.inference_on_image(filename)
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Uploads')
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
@@ -28,6 +24,7 @@ def allowed_file(filename):
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
+        print('hi')
         # check if the post request has the file part
         if 'file' not in request.files:
             flash('No file part')
@@ -44,7 +41,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
             nutrients = predict(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return render_template('nutritionFacts.html', calories=round(nutrients['Calories']), tFat=round(nutrients['Total Fat']), sFat=round(nutrients['Saturated Fat']), chol=round(nutrients['Cholesterol']), carb=round(nutrients['Carbohydrates']), fiber=round(nutrients['Fiber']), protein=(nutrients['Protein'])) #put in the new page to redirect to in here
+            return render_template('nutritionFacts.html', calories=round(nutrients['Calories']), tFat=round(nutrients['Total Fat']), sFat=round(nutrients['Saturated Fat']), chol=round(nutrients['Cholesterol']), carb=round(nutrients['Carbohydrates']), fiber=round(nutrients['Fiber']), protein=round(nutrients['Protein']))  # put in the new page to redirect to in here
     return render_template('food.html')
 
 

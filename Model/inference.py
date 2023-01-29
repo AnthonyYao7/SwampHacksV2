@@ -2,7 +2,11 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import pprint
-model = tf.keras.models.load_model("FoodNutrientCalculator2")
+import os
+import pathlib
+
+print(pathlib.Path(__file__).parent.resolve())
+model = tf.keras.models.load_model(os.path.join(pathlib.Path(__file__).parent.resolve(), "FoodNutrientCalculator2"))
 
 
 def inference_on_image(path):
@@ -10,7 +14,7 @@ def inference_on_image(path):
     im = np.array(im.resize((256, 256)), dtype=np.float16)
 
     prediction = model.predict(im[np.newaxis])
-    f = np.load("NormalizationFactors.npy.npz")
+    f = np.load(os.path.join(pathlib.Path(__file__).parent.resolve(), "NormalizationFactors.npy.npz"))
     factors = f['factors']
     names = f['names']
 
