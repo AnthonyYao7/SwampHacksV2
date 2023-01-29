@@ -2,7 +2,7 @@ import os
 from flask import Flask, flash, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 
-UPLOAD_FOLDER = os.path.join(os.getcwd(), 'SwampHacksFoodMacroPredictor/WebServer/Uploads')
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'Uploads')
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 app = Flask(__name__, template_folder='templates', static_folder='staticFiles')
